@@ -65,10 +65,11 @@ spec:
       name: redis-pod
       app: voting-app-proj 
   template:
-    name: redis-pod
-    labels:
+    metadata:
       name: redis-pod
-      app: voting-app-proj 
+      labels:
+        name: redis-pod
+        app: voting-app-proj 
     spec:
       containers:
       - name: redis-container
