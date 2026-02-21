@@ -87,3 +87,29 @@ spec:
       volumes:
       - name: db-data
         emptyDir: {}
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker
+  labels:
+    app: worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: worker-pod
+      app: voting-app-proj 
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      name: worker-pod
+      labels:
+        name: worker-pod
+        app: voting-app-proj  
+    spec:
+      containers:
+      - name: worker-container
+        image: dockersamples/examplevotingapp_worker
+       
