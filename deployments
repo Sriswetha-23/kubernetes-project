@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vote
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: voting-app-pod
+      app: voting-app-proj 
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      name: voting-app-pod
+      labels:
+        name: voting-app-pod
+        app: voting-app-proj  
+    spec:
+      containers:
+      - name: voting-app-container
+        image: dockersamples/examplevotingapp_vote
+        ports:
+        - containerPort: 80
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: result
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: result-app-pod
+      app: voting-app-proj 
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      name: result-app-pod
+      labels:
+        name: result-app-pod
+        app: voting-app-proj  
+    spec:
+      containers:
+      - name: result-app-container
+        image: dockersamples/examplevotingapp_result
+        ports:
+        - containerPort: 80
+
