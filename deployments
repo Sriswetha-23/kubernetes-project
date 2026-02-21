@@ -55,6 +55,36 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: redis
+  labels:
+    app: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: redis-pod
+      app: voting-app-proj 
+  template:
+    name: redis-pod
+    labels:
+      name: redis-pod
+      app: voting-app-proj 
+    spec:
+      containers:
+      - name: redis-container
+        image: redis:alpine
+        ports:
+        - containerPort: 6379
+        volumeMounts:
+        - mountPath: /data
+          name: redis-data
+      volumes:
+      - name: redis-data
+        emptyDir: {} 
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
   name: db
   labels:
     app: db
