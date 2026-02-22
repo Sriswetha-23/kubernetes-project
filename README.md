@@ -1,7 +1,6 @@
 <img width="862" height="567" alt="image" src="https://github.com/user-attachments/assets/8f4f890d-3a66-4b73-a6ed-895ab10ff89f" />
 
 
-[image.png](attachment:63b1d24d-d4ba-436b-b6b3-2a918f46bfb5:image.png)
 
 Casting vote for Dogs!
 [image.png](attachment:e2b4fb7a-0084-46c1-9d80-e31e54e4240a:image.png)
