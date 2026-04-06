@@ -5,7 +5,7 @@
 1. User casts their vote through vote-app (UI)
 2. It is stored in redis app temporarily
 3. The worker gets the vote and updates the postgres sql DB
-4. The result-app(UI) displays the result
+4. The result-app(UI) fetches from DB and displays the result
    
 <img width="660" height="102" alt="image" src="https://github.com/user-attachments/assets/236b2ecd-72ee-43a4-9416-ac622215be35" />
 <img width="1051" height="462" alt="image" src="https://github.com/user-attachments/assets/712a6d37-e2ed-4af0-a58f-5523645b5dfb" />
