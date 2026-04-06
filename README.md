@@ -13,6 +13,7 @@ Nodejs web application - displays result
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/15364472-dd19-46ae-87d2-a7ce6e6fe6be" />
 
 (Im casting vote for Dogs!)
+The result
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f2255522-af4c-4d6c-9a64-de33d176a823" />
 
 
